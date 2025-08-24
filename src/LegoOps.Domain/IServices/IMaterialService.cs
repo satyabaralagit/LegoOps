@@ -6,6 +6,7 @@ namespace LegoOps.Application;
 public interface IMaterialService
 {
     Task<UnitOverviewDto?> GetMaterialStatusByUnit(string unitId);
+    Task<List<UnitOverviewDto>> GetAllUnitsAndMaterials();
 }
 
 

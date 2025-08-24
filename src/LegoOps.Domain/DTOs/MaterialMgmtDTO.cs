@@ -11,11 +11,13 @@ public class MaterialShortageDto
     public decimal AvailableQty { get; set; }
     public decimal ShortageQty => Math.Max(0, RequiredQty - AvailableQty);
     public string UoM { get; set; }
+    public string UnitId { get; set; }
 }
 
 public class UnitOverviewDto
 {
-    public string UnitId { get; set; } 
+    public string UnitId { get; set; }
+    public string UnitName { get; set; }
     public string ProductionStatus { get; set; } 
     public DateTime? LastUpdatedUtc { get; set; }
     public List<MaterialShortageDto> Shortages { get; set; }

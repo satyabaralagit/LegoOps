@@ -25,9 +25,10 @@ public class MaterialId
     public override string ToString() => Value;
 }
 
-public class UnitProgress
+public class Units
 {
     public UnitId UnitId { get; init; } = new("UNKNOWN");
+    public string UnitName { get; init; } = string.Empty;
     public UnitStatus Status { get; init; } = UnitStatus.Unknown;
     public DateTime LastUpdatedUtc { get; init; } = DateTime.UtcNow;
 }

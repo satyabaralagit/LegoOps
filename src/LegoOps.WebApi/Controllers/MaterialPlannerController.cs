@@ -29,4 +29,19 @@ public class MaterialPlannerController : BaseApiController
         }           
         
     }
+
+    [HttpGet("AllUnitsMaterialOverview")]
+    public async Task<IActionResult> GetAllUnitsMaterialOverview()
+    {
+        try
+        {
+            var dto = await _materialService.GetAllUnitsAndMaterials();           
+            return OkResponse(dto);
+        }
+        catch (Exception ex)
+        {
+            return BadRequestResponse("something went wrong");
+        }
+
+    }
 }

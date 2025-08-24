@@ -3,12 +3,14 @@ using LegoOps.Domain;
 
 namespace LegoOps.Application;
 
-public interface IProgressProvider
+public interface IUnitProvider
 {
-    Task<UnitProgress?> GetProgressAsync(UnitId unitId);
+    Task<Units?> GetUnitAsync(UnitId unitId);
+    Task<List<Units>> GetAllUnitAsync();
 }
 
 public interface IMaterialProvider
 {
-    Task<IReadOnlyList<UnitMaterial>> GetMaterialsAsync(UnitId unitId);
+    Task<List<UnitMaterial>> GetMaterialsAsync(UnitId unitId);
+    Task<List<UnitMaterial>> GetAllMaterialsAsync();
 }

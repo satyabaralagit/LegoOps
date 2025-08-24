@@ -4,10 +4,11 @@
 A .NET 8 Clean Architecture solution that mocks SAP data sources and exposes an aggregation endpoint.
 
 ## Projects
-- **LegoOps.Domain** — entities & value objects
-- **LegoOps.Services** — MaterialService (GetMaterialStatusByUnit), interface
-- **LegoOps.Infrastructure.MockSap** — in-memory mock providers for SAP progress & materials
-- **LegoOps.WebApi** — thin API layer exposing `/api/MaterialPlanner/MaterialShortageOverview/{unitId}`
+- **LegoOps.Domain** — entities, DTOs & value objects
+- **LegoOps.Services** — MaterialService (GetMaterialStatusByUnit, GetAllUnitsAndMaterials), interface
+- **LegoOps.Infrastructure.MockSap** — in-memory mock providers for SAP Units & its Material/material shortage
+- **LegoOps.WebApi** — thin API layer exposing `/api/MaterialPlanner/MaterialShortageOverview/{unitId}` 
+and `/api/MaterialPlanner/AllUnitsMaterialOverview`
 - **LegoOps.Application.Tests** — xUnit + Moq tests for the Application layer
 
 ## Run
